@@ -23,7 +23,7 @@ export default class Rating extends React.Component {
   }
   
   componentDidMount() {
-    axios.get('http://127.0.0.1:8000/api/movies/' + this.mid + '/')
+    axios.get('http://54.193.126.34:8000/api/movies/' + this.mid + '/')
     .then(response => {
       this.setState({
         movie: response.data
@@ -40,7 +40,7 @@ export default class Rating extends React.Component {
       movie: this.state.movie.id,
     };
 
-    axios.post(`http://127.0.0.1:8000/api/rating/`, rating)
+    axios.post(`http://54.193.126.34:8000/api/rating/`, rating)
       .then(res => {
         console.log(res);
         console.log(res.data);

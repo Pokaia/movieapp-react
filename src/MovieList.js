@@ -17,7 +17,7 @@ export default class MovieList extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://127.0.0.1:8000/api/movies/')
+    axios.get('http://54.193.126.34:8000/api/movies/')
     .then(response => {
       this.setState({
         movies: response.data

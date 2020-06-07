@@ -21,14 +21,14 @@ export default class Movie extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://127.0.0.1:8000/api/movies/' + this.id + '/')
+    axios.get('http://54.193.126.34:8000/api/movies/' + this.id + '/')
     .then(response => {
       this.setState({
         movie: response.data
       })
     })
     
-    axios.get('http://127.0.0.1:8000/api/rating/' + this.id + '/')
+    axios.get('http://54.193.126.34:8000/api/rating/' + this.id + '/')
     .then(response => {
       this.setState({
         ratings: response.data
